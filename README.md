@@ -90,6 +90,15 @@ HTTPS and image display requires additional dll's on windows (libtls, libpng, li
 
 More examples can be found in the `examples` directory.
 
+# Authentication
+
+Basic authentication is as simple as adding
+
+    Authorization: Basic username:password
+
+header in request. Don't be in a hurry: you need to mark username:password part and do `M-x base64-encode-region` on it. 
+This won't work for digest auth, as it requires two stage request.
+
 # In-buffer variables
 
 You declare a variable like this:
